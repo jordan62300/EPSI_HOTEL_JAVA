@@ -4,11 +4,15 @@ import java.time.LocalDate;
 
 public class Reservation {
 	
-	private LocalDate reservationDate;
-	
-	public Reservation(LocalDate reservationDate) {
+	private LocalDate reservationDate = LocalDate.of(2007, 9, 24);
+	public Reservation(LocalDate reservationDate ) {
 		setReservationDate(reservationDate);
 	}
+	
+	public Reservation() {
+		
+	}
+
 
 	public LocalDate getReservationDate() {
 		return reservationDate;

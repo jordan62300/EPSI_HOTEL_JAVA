@@ -13,8 +13,8 @@ public class Chambre extends Reservation {
 	static ArrayList<Chambre> chambre = new ArrayList<Chambre>();
 	
 
-	public Chambre(int capacity , double price , int idRoom , String name , LocalDate reservation) {
-		super(reservation);
+	public Chambre(int capacity , double price , int idRoom , String name) {
+		super();
 		setCapacity(capacity);
 		setPrice(price);
 		setIdRoom(idRoom);
@@ -22,6 +22,9 @@ public class Chambre extends Reservation {
 		
 	}
 	
+	public Chambre() {
+		super();
+	}
 	
 	
 	
@@ -33,11 +36,12 @@ public class Chambre extends Reservation {
 	
 	// Affiche le contenu de l'arraylist chambre
 	public void getChambre() {
+		System.out.println ("-------------------");
 		 for(Chambre elem: chambre)
 	       {
+			 System.out.println ("numéro : " +elem.idRoom);
 	       	 System.out.println ("capacité : " +elem.capacity);
 	       	 System.out.println ("prix : " +elem.price);
-	       	 System.out.println ("numéro : " +elem.idRoom);
 	       	 System.out.println ("nom : " +elem.name);
 	       	System.out.println ("-------------------");
 	       	 
@@ -79,6 +83,7 @@ public class Chambre extends Reservation {
 	public int getIdRoom() {
 		return idRoom;
 	}
+	
 
 
 	public void setIdRoom(int idRoom) {

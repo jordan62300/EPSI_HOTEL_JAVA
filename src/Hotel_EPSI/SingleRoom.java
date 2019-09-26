@@ -7,8 +7,12 @@ public class SingleRoom extends Chambre{
 	
 	static ArrayList<SingleRoom> singleroom = new ArrayList<SingleRoom>();
 	
-	public SingleRoom(int capacity , double price , int idRoom , String name , LocalDate reservation) {
-		super(capacity ,price , idRoom ,name ,reservation);
+	public SingleRoom(int capacity , double price , int idRoom , String name) {
+		super(capacity ,price , idRoom ,name);
+	}
+	
+	public SingleRoom() {
+		
 	}
 	
 	public void createSingleRoom(SingleRoom singleRoomObj) {
@@ -18,7 +22,7 @@ public class SingleRoom extends Chambre{
 	
 	
 	// Affiche le contenu de l'arraylist chambre
-	public void getSingle() {
+	public void getAllSingleRoom() {
 		 for(SingleRoom elem: singleroom)
 	       {
 	       	 System.out.println ("capacité : " +elem.getCapacity());
@@ -29,5 +33,9 @@ public class SingleRoom extends Chambre{
 	       	 
 	       }
 	}
+	
+	
+	
+	
 
 }

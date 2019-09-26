@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class SuiteRoom extends Chambre {
 	static ArrayList<SuiteRoom> suiteroom = new ArrayList<SuiteRoom>();
 	
-	public SuiteRoom(int capacity , double price , int idRoom , String name , LocalDate reservation) {
-		super(capacity ,price , idRoom ,name ,reservation);
+	public SuiteRoom(int capacity , double price , int idRoom , String name) {
+		super(capacity ,price , idRoom ,name );
 	}
 	
 	public void createFamilyRoom(SuiteRoom suiteroomobj) {

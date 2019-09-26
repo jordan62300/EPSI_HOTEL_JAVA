@@ -8,6 +8,8 @@ public class Hotel {
 	
 	static ArrayList<Chambre> chambre = new ArrayList<Chambre>();
 	
+	
+	
 	public Hotel(String nom , String adresse) {
 		setNom(nom);
 		setAdresse(adresse);
