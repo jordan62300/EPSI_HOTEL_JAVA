@@ -1,8 +1,12 @@
 package Hotel_EPSI;
 
+import java.util.ArrayList;
+
 public class Hotel {
 	private String nom;
 	private String adresse;
+	
+	static ArrayList<Chambre> chambre = new ArrayList<Chambre>();
 	
 	public Hotel(String nom , String adresse) {
 		setNom(nom);

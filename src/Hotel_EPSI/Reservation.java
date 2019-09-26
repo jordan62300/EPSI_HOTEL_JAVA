@@ -8,7 +8,6 @@ public class Reservation {
 	
 	public Reservation(LocalDate reservationDate) {
 		setReservationDate(reservationDate);
-		System.out.println(reservationDate);
 	}
 
 	public LocalDate getReservationDate() {
