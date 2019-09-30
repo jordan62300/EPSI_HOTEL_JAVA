@@ -48,6 +48,20 @@ public class Chambre extends Reservation {
 	       }
 	}
 	
+	public static Chambre getRoomByRoomNumber(int roomNumber)
+	{
+	    for (Chambre elem : chambre)
+	    {
+	        if(elem.getIdRoom() == roomNumber)
+	            return elem;
+	    }
+	    return null; //si aucun joueur n'a ne couleur color, on retourne null
+	}
+	
+	public void removeRoom(Chambre chambreToRemove) {
+		chambre.remove(chambreToRemove);
+	}
+	
 	
 	
 	// Affiche les infos de la chambre 

@@ -2,6 +2,7 @@ package Hotel_EPSI;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class SingleRoom extends Chambre{
 	
@@ -20,6 +21,10 @@ public class SingleRoom extends Chambre{
 		super.createChambre(singleRoomObj);
 	}
 	
+	public void removeSingleRoom(SingleRoom singleRoom) {
+		singleroom.remove(singleRoom);
+	}
+	
 	
 	// Affiche le contenu de l'arraylist chambre
 	public void getAllSingleRoom() {
@@ -32,6 +37,42 @@ public class SingleRoom extends Chambre{
 	       	System.out.println ("-------------------");
 	       	 
 	       }
+	}
+	
+	// recupere une chambre grace a son numero de chambre
+	public static SingleRoom getSinglerRoomByRoomNumber(int roomNumber)
+	{
+	    for (SingleRoom elem : singleroom)
+	    {
+	        if(elem.getIdRoom() == roomNumber)
+	            return elem;
+	    }
+	    return null; 
+	}
+	
+	
+	// Recupere le numero de chambre que l'utilisateur veut reserver ou renvoit une erreur si la chambre n'existe pas
+	public static int getSingleRoomNumber() throws Exception {
+		System.out.println ("Choisissez un numéro de chambre parmis celles proposées");
+		Scanner scan = new Scanner(System.in);
+		int roomNumber = scan.nextInt();
+		Boolean numberExist = null;
+		 for(SingleRoom elem: singleroom)
+	       {
+	       	 if(roomNumber == elem.getIdRoom()) {
+	       		 numberExist = true;
+	       		 break;
+	       	 } else {
+	       		 numberExist = false;
+	       	 }
+	       	
+	       }
+		 if(!numberExist) {
+			 System.out.println("Le numéro de chambre n'existe pas");
+			 throw new Exception();
+		 }
+		 System.out.println("Le numéro de chambre est bien");
+		 return roomNumber;
 	}
 	
 	
